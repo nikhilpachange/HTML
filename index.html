@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        section {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .profile {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .profile h2 {
+            margin: 10px 0;
+        }
+        .skills {
+            display: flex;
+            justify-content: space-between;
+        }
+        .skills div {
+            width: 30%;
+        }
+        .skills label {
+            display: block;
+            font-weight: bold;
+        }
+        progress {
+            width: 100%;
+        }
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .project {
+            width: 30%;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        .project:hover {
+            transform: scale(1.05);
+        }
+        .project img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .project-content {
+            padding: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .skills, .projects {
+                flex-direction: column;
+            }
+            .skills div, .project {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NIKHIL PACHANGE'S Portfolio</h1>
+    </header>
+
+    <section class="profile">
+        <img src="images/profile.jpg" alt="Profile Picture">
+        <h2>Web Developer | Programmer</h2>
+        <p>Welcome to my portfolio! I am a passionate developer with expertise in frontend and backend development. Here’s a look at my skills and projects.</p>
+    </section>
+
+    <section class="skills">
+        <div>
+            <label for="html">HTML</label>
+            <progress id="html" value="90" max="100"></progress>
+        </div>
+        <div>
+            <label for="css">CSS</label>
+            <progress id="css" value="80" max="100"></progress>
+        </div>
+        <div>
+            <label for="js">JavaScript</label>
+            <progress id="js" value="75" max="100"></progress>
+        </div>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <img src="images/project1.jpg" alt="Project 1">
+                <div class="project-content">
+                    <h3>Portfolio Website</h3>
+                    <p>This project is a personal portfolio built using HTML and CSS. It showcases my skills and projects.</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="images/project2.jpg" alt="Project 2">
+                <div class="project-content">
+                    <h3>E-commerce Website</h3>
+                    <p>An interactive e-commerce platform with product listing and filters, built with pure HTML.</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="images/project3.jpg" alt="Project 3">
+                <div class="project-content">
+                    <h3>Responsive Web Design</h3>
+                    <p>A fully responsive web design that works across all devices and screen sizes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Contact: nikhil1pachange@emai.com | GitHub: GitHub.com/nikhilpachange
+        <nikhilpachange></nikhilpachange></p>
+    </footer>
+</body>
+</html>
+
+
+
+<!-- portfolio-project/
+│   index.html
+└───images/
+    │   profile.jpg
+    │   project1.jpg
+    │   project2.jpg
+    │   project3.jpg -->
