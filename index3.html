@@ -1,0 +1,61 @@
+<!-- Registration Form with Radio Buttons and Select Menu -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+
+<h1>Register</h1>
+
+<form action="#" method="post">
+    <fieldset>
+        <legend>Personal Information</legend>
+
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required minlength="4" maxlength="20" placeholder="Enter your username">
+        </div>
+
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required minlength="8" placeholder="Enter your password">
+        </div>
+
+        <div>
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+        </div>
+
+        <div>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <div>
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="">Select your country</option>
+                <option value="usa">United States</option>
+                <option value="canada">Canada</option>
+                <option value="uk">United Kingdom</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+
+        <div>
+            <input type="submit" value="Register">
+        </div>
+    </fieldset>
+</form>
+
+</body>
+</html>
