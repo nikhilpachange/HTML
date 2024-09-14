@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form - Page 2</title>
+</head>
+<body>
+
+<h1>Survey Form - Page 2</h1>
+
+<form action="page3.html" method="post">
+    <fieldset>
+        <legend>Survey Questions</legend>
+
+        <div>
+            <label for="feedback">How satisfied are you with our service?</label>
+            <select id="feedback" name="feedback" required>
+                <option value="very-satisfied">Very Satisfied</option>
+                <option value="satisfied">Satisfied</option>
+                <option value="neutral">Neutral</option>
+                <option value="dissatisfied">Dissatisfied</option>
+                <option value="very-dissatisfied">Very Dissatisfied</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Your comments here"></textarea>
+        </div>
+
+        <div>
+            <input type="submit" value="Next">
+        </div>
+    </fieldset>
+</form>
+
+</body>
+</html>
