@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+</head>
+<body>
+    <header>
+        <h1>Image Gallery</h1>
+    </header>
+
+    <section>
+        <figure>
+            <img src="images/gallery1.jpg" alt="Gallery Image 1" onclick="openModal('gallery1-large.jpg')">
+            <figcaption>Gallery Image 1</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/gallery2.jpg" alt="Gallery Image 2" onclick="openModal('gallery2-large.jpg')">
+            <figcaption>Gallery Image 2</figcaption>
+        </figure>
+    </section>
+
+    <dialog id="imageModal">
+        <img id="modalImage" alt="Gallery Image">
+        <button onclick="closeModal()">Close</button>
+    </dialog>
+
+    <script>
+        function openModal(imageSrc) {
+            document.getElementById('modalImage').src = 'images/' + imageSrc;
+            document.getElementById('imageModal').showModal();
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').close();
+        }
+    </script>
+</body>
+</html>
+
+
+
+<!-- image-gallery/
+│   index.html
+└───images/
+    │   gallery1.jpg
+    │   gallery2.jpg
+    │   gallery1-large.jpg
+    │   gallery2-large.jpg -->
