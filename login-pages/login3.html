@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page 3</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f1f1f1;
+            font-family: 'Roboto', sans-serif;
+        }
+        .login-wrapper {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            width: 90%;
+            max-width: 400px;
+        }
+        .login-wrapper h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .login-wrapper input[type="text"],
+        .login-wrapper input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .login-wrapper input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .login-wrapper input[type="submit"]:hover {
+            background: #45a049;
+        }
+        .login-wrapper .signup {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .login-wrapper .signup a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+        .login-wrapper .signup a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .login-wrapper {
+                padding: 15px;
+                width: 100%;
+            }
+            .login-wrapper h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-wrapper">
+        <h2>Login to Your Account</h2>
+        <form action="#" method="post">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+        <div class="signup">
+            <p>Don't have an account? <a href="#">Sign Up</a></p>
+        </div>
+    </div>
+</body>
+</html>
