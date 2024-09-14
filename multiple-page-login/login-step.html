@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Page Login Form - Step-by-Step Navigation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 360px;
+            padding: 20px;
+        }
+        .form-container h2 {
+            margin-top: 0;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="password"],
+        .form-container input[type="email"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-container button:hover {
+            background: #0056b3;
+        }
+        .step-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .step-buttons button {
+            flex: 1;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div id="step1">
+            <h2>Login - Step 1</h2>
+            <form>
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <div class="step-buttons">
+                    <button type="button" onclick="showStep(2)">Next</button>
+                </div>
+            </form>
+        </div>
+        <div id="step2" style="display: none;">
+            <h2>Login - Step 2</h2>
+            <form>
+                <input type="email" name="email" placeholder="Email" required>
+                <div class="step-buttons">
+                    <button type="button" onclick="showStep(1)">Back</button>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showStep(step) {
+            document.querySelectorAll('.form-container > div').forEach(div => {
+                div.style.display = 'none';
+            });
+            document.getElementById(`step${step}`).style.display = 'block';
+        }
+    </script>
+</body>
+</html>

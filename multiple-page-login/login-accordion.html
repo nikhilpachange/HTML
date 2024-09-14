@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Page Login Form - Accordion Style</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 360px;
+            padding: 20px;
+        }
+        .accordion {
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .accordion:hover {
+            background-color: #0056b3;
+        }
+        .panel {
+            display: none;
+            padding: 15px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .panel input[type="text"],
+        .panel input[type="password"],
+        .panel input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .panel button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .panel button:hover {
+            background: #0056b3;
+        }
+        .forgot-password {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <button class="accordion">Login</button>
+        <div class="panel">
+            <h2>Login</h2>
+            <form>
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+        </div>
+
+        <button class="accordion">Sign Up</button>
+        <div class="panel">
+            <h2>Sign Up</h2>
+            <form>
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const accordions = document.querySelectorAll('.accordion');
+        accordions.forEach(accordion => {
+            accordion.addEventListener('click', () => {
+                const panel = accordion.nextElementSibling;
+                if (panel.style.display === 'block') {
+                    panel.style.display = 'none';
+                } else {
+                    document.querySelectorAll('.panel').forEach(p => p.style.display = 'none');
+                    panel.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
