@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Landing Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; box-sizing: border-box; }
+        header { background: #444; color: #fff; padding: 20px; text-align: center; }
+        nav ul { list-style: none; padding: 0; }
+        nav ul li { display: inline; margin: 0 15px; }
+        nav ul li a { color: #fff; text-decoration: none; }
+        .container { width: 80%; margin: auto; padding: 20px; }
+        .features, .testimonials { margin: 20px 0; }
+        .feature, .testimonial { background: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 15px; margin: 10px 0; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; }
+        .contact-form button { background: #444; color: #fff; border: none; padding: 10px; border-radius: 5px; cursor: pointer; }
+        .contact-form button:hover { background: #666; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="features" class="features">
+            <h2>Product Features</h2>
+            <div class="feature">
+                <h3>Feature One</h3>
+                <p>Description of feature one.</p>
+            </div>
+            <div class="feature">
+                <h3>Feature Two</h3>
+                <p>Description of feature two.</p>
+            </div>
+            <div class="feature">
+                <h3>Feature Three</h3>
+                <p>Description of feature three.</p>
+            </div>
+        </section>
+        <section id="testimonials" class="testimonials">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial">
+                <p>"Testimonial one from a customer."</p>
+            </div>
+            <div class="testimonial">
+                <p>"Testimonial two from a customer."</p>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
